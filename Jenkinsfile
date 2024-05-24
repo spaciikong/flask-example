@@ -19,7 +19,7 @@ node {
            // Scan all vuln levels
            sh 'mkdir -p reports'
            sh 'ls -R .'
-           sh 'grype yourdomain.com/admin/flask-example:latest -o template -t report.tmpl --file report/grype.html'
+           sh 'grype yourdomain.com/admin/flask-example:latest -o template -t report.tmpl --file reports/grype.html'
            
            publishHTML target : [
                allowMissing: true,
